@@ -1,7 +1,5 @@
 SPOTIFY_CLIENT_ID = "8e1781d096804201b4688932dde7e873";
 
-var spotifyApi = new SpotifyWebApi();
-
 // See if we have a token stored
 let token = localStorage.getItem('spotify_token');
 if (token !== null) {
