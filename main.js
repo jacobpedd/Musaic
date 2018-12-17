@@ -23,7 +23,7 @@ if (window.location.href.includes('#access_token')) {
     resultDiv.innerText = "token";
 } else {
     console.log('no token in url');
-    resultDiv.innerText = "no token";
+    resultDiv.innerText = window.location.href;
 }
 
 console.log(window.location.href);
