@@ -7,7 +7,7 @@ if (token !== null) {
     // Test the token
 }
 
-// See if there is a token in the URL
+window.location.href += "#access_token=123"
 
 // Get User Access Token
 const callback_url = encodeURIComponent('https://serene-curran-915888.netlify.com');
@@ -18,7 +18,8 @@ document.getElementById('spotify-link').href = url;
 let resultDiv = document.getElementById('result');
 if (window.location.href.includes('#access_token')) {
     console.log('token in url');
-    resultDiv.innerText = "token";
+    token = window.location.href.split('#')[1].split('&')[0].split('=')[1]
+    resultDiv.innerText = token;
 } else {
     console.log('no token in url');
     resultDiv.innerText = window.location.href;
